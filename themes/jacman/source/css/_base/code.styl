@@ -1,0 +1,212 @@
+// More theme here http//softwaremaniacs.org/media/soft/highlight/test.html
+// Just change those colors
+// https//github.com/chriskempson/tomorrow-theme
+highlight-background = #f9f9f9
+highlight-current-line = #393939
+highlight-line-numbers = #666
+highlight-selection = #515151
+highlight-foreground = #cccccc
+highlight-comment = #999999
+highlight-red = #f2777a
+highlight-orange = #f99157
+highlight-yellow = #ffcc66
+highlight-green = #42b983
+highlight-aqua = #66cccc
+highlight-blue = #6699cc
+highlight-purple = #0092db
+highlight-font-size = 0.9em
+highlight-font = 'Inconsolata', Monaco, courier, monospace
+
+$code-block
+  background highlight-background
+  margin 0.5em 0
+  padding 0.5em 2%
+  color highlight-foreground
+  line-height line-height
+  font-size 0.8em
+  -webkit-border-radius 0.35em
+  border-radius 0.35em
+  word-wrap break-word
+  @media phone
+    font-size highlight-font-size
+
+$line-numbers
+  color highlight-line-numbers 
+  font-size 0.4em
+  @media phone
+    font-size highlight-font-size
+    line-height line-height
+
+.article-content   
+  code, pre
+    font-family font-code-family
+    font-size highlight-font-size
+    background-color highlight-background
+    -webkit-font-smoothing initial
+    -moz-osx-font-smoothing initial
+
+  code
+    color #525252
+    padding 2px 6px
+    margin 0 2px
+    border 1px solid #e6e6e6
+    white-space nowrap
+    
+  .highlight
+    overflow-x auto
+    position relative
+    padding 0
+    margin 0.8em 0 0.8em 0.8em
+    background-color highlight-background
+    padding .8em .8em .4em
+    box-shadow 0 1px 1px rgba(0,0,0,0.125)
+    line-height 1.1em
+    @media phone
+      font-size highlight-font-size
+    table, tr, td
+      width 100%
+      border-collapse collapse
+      padding 0
+      margin 0
+      border 0
+    pre
+      padding 1.2em 1.5em 
+      margin 0
+    .gutter
+      width 1.5em
+    .code
+      pre
+        padding-left .5em
+    &.html, &.js, &.bash, &.css
+      .code:after
+        position absolute
+        top 0
+        right 0
+        color #ccc
+        text-align right
+        font-size .75em
+        padding 5px 10px 0
+        line-height 15px
+        height 15px
+        font-weight 600
+    &.html .code:after
+      content 'HTML'
+    &.js .code:after
+      content 'JS'
+    &.bash .code:after
+      content 'Shell'
+    &.css .code:after
+      content 'CSS'
+
+  .gist
+    margin 0.5em 0
+    background highlight-background
+    padding 1em 2%
+    -webkit-border-radius 0.35em
+    border-radius 0.35em
+    .gist-file
+      border none
+      font-family font-mono
+      margin 0
+      .gist-data
+        background none
+        border none
+        .line-numbers
+          @extend $line-numbers
+          background none
+          border none
+          padding 0 1.5em 0 0
+        .line-data
+          padding 0 !important
+      .highlight
+        margin 0
+        padding 0
+        border none
+        background highlight-background
+      .gist-meta
+        background highlight-background
+        color highlight-comment
+        font 0.85em font-serif
+        text-shadow 0 0
+        padding 0
+        margin-top 1em
+        a
+          color color-blue
+          font-weight normal
+          &:hover
+            color color-theme
+
+pre
+  color: #525252
+  .function .keyword,
+  .constant
+    color: #0092db
+  .keyword,
+  .attribute
+    color: #e96900
+  .number,
+  .literal
+    color: #AE81FF
+  .tag,
+  .tag .title,
+  .change,
+  .winutils,
+  .flow,
+  .lisp .title,
+  .clojure .built_in,
+  .nginx .title,
+  .tex .special
+    color: #2973b7
+  .class .title
+    color: white
+  .symbol,
+  .symbol .string,
+  .value,
+  .regexp
+    color: highlight-green
+  .title
+    color: #A6E22E
+  .tag .value,
+  .string,
+  .subst,
+  .haskell .type,
+  .preprocessor,
+  .ruby .class .parent,
+  .built_in,
+  .sql .aggregate,
+  .django .template_tag,
+  .django .variable,
+  .smalltalk .class,
+  .javadoc,
+  .django .filter .argument,
+  .smalltalk .localvars,
+  .smalltalk .array,
+  .attr_selector,
+  .pseudo,
+  .addition,
+  .stream,
+  .envvar,
+  .apache .tag,
+  .apache .cbracket,
+  .tex .command,
+  .prompt
+    color: highlight-green
+  .comment,
+  .java .annotation,
+  .python .decorator,
+  .template_comment,
+  .pi,
+  .doctype,
+  .deletion,
+  .shebang,
+  .apache .sqbracket,
+  .tex .formula
+    color: #b3b3b3
+  .coffeescript .javascript,
+  .javascript .xml,
+  .tex .formula,
+  .xml .javascript,
+  .xml .vbscript,
+  .xml .css,
+  .xml .cdata
+    opacity: 0.5
