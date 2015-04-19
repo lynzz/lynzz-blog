@@ -1,5 +1,10 @@
 title: Simple Javascript Template
 date: 2013/07/29
+categories:
+- 前端
+tags:
+- javascript
+- template
 ---
 
 >经常碰到拼接字符串时候，平时都是用[泽飞](http://www.planabc.net "泽飞")写的substitute函数，但老是忘记那个函数，现给它转截给过来，先记着
